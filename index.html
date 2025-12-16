@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arty Metal - Serralheria e Caldeiraria em Salto/SP com +10 anos de experiência. Portões sob medida, estruturas metálicas, carrocerias. Garantia de até 10 anos!">
+    <title>Arty Metal - Serralheria e Caldeiraria em Salto/SP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .cta-button i {
+            margin-right: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about {
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #FF6B35;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-card i {
+            font-size: 3em;
+            color: #FF6B35;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: background 0.3s;
+        }
+
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .benefit-item i {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #FF6B35;
+        }
+
+        .benefit-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item p {
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            background: #FF6B35;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-phone {
+            background: white;
+            color: #FF6B35;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover, .btn-phone:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-info-item i {
+            color: #FF6B35;
+            font-size: 1.2em;
+        }
+
+        .guarantee-badge {
+            background: #FFD700;
+            color: #1a1a2e;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>🔧 Arty Metal - Serralheria e Caldeiraria</h1>
+        <p>Mais de 15 anos transformando metal em soluções duráveis para Salto e região</p>
+        <div class="guarantee-badge">⭐ Até 10 Anos de Garantia na Pintura</div>
+        <br><br>
+        <a href="#contato" class="cta-button">
+            <i class="fab fa-whatsapp"></i> Solicitar Orçamento Grátis
+        </a>
+    </div>
+
+    <!-- Sobre -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Experiência e Qualidade que Você Pode Confiar</h2>
+            <div class="about-content">
+                <p>
+                    <strong>Com mais de 15 anos de atuação em Salto e região</strong>, a Arty Metal é especializada em serralheria e caldeiraria, oferecendo serviços com excelência, segurança e mão de obra altamente qualificada.
+                </p>
+                <p>
+                    Nosso compromisso é entregar soluções completas em estruturas metálicas, portões, carrocerias e muito mais, sempre com foco em <strong>qualidade, durabilidade e acabamento de alto padrão</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="container">
+        <h2 class="section-title">Nossos Serviços Especializados</h2>
+        <p class="section-subtitle">Soluções completas em serralheria e caldeiraria para sua necessidade</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-door-open"></i>
+                <h3>Portões Sob Medida</h3>
+                <p>Fabricação e instalação de portões personalizados, com ou sem sistema de automação. Projetos exclusivos para sua residência ou empresa.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-cog"></i>
+                <h3>Instalação de Motores</h3>
+                <p>Instalação profissional de motores para portões com <strong>1 ano de garantia</strong>. Automação segura e confiável.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Pintura Hamerite Premium</h3>
+                <p>Proteção especial contra ferrugem com tinta Hamerite de alta qualidade. <strong>Garantia de até 10 anos</strong>!</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-truck"></i>
+                <h3>Carrocerias e Baús</h3>
+                <p>Fabricação e reparos de carrocerias, siders e baús para veículos. Projetos personalizados para sua necessidade.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-building"></i>
+                <h3>Estruturas Metálicas</h3>
+                <p>Projetos e montagem industrial sob medida. Galpões, coberturas, mezaninos e muito mais.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-fire"></i>
+                <h3>Soldas e Caldeiraria</h3>
+                <p>Soldas especializadas em diversos tipos de metal. Reparos e manutenção com qualidade profissional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Por que escolher a Arty Metal?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Atendimento Personalizado</h3>
+                    <p>Cada projeto é único e recebe atenção especial da nossa equipe</p>
+                </div>
+
+                <div class="benefit-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Compromisso com Prazos</h3>
+                    <p>Cumprimos os prazos acordados com você</p>
+                </div>
+
+                <div class="benefit-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Acabamento de Alto Padrão</h3>
+                    <p>Qualidade superior em cada detalhe do trabalho</p>
+                </div>
+
+                <div class="benefit-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Garantia Estendida</h3>
+                    <p>Até 10 anos de garantia na pintura Hamerite</p>
+                </div>
+
+                <div class="benefit-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Mão de Obra Especializada</h3>
+                    <p>Equipe com mais de 15 anos de experiência</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contato">
+        <h2>📞 Solicite Seu Orçamento Agora!</h2>
+        <p>Entre em contato e receba uma proposta personalizada para o seu projeto</p>
+        
+        <div class="contact-buttons">
+            <a href="https://wa.me/5511973996931?text=Olá! Gostaria de solicitar um orçamento" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="tel:+5511973996931" class="btn-phone">
+                <i class="fas fa-phone"></i> Ligar Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Arty Metal - Serralheria e Caldeiraria</h3>
+            <div class="footer-info">
+                <div class="footer-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Salto - SP e Região</span>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(11) 97399-6931</span>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>(11) 97399-6931</span>
+                </div>
+            </div>
+            <p style="margin-top: 20px; opacity: 0.7;">© 2024 Arty Metal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511973996931?text=Olá! Gostaria de solicitar um orçamento" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Script para ajustar altura automaticamente no iframe
+        window.addEventListener('load', function() {
+            const height = document.documentElement.scrollHeight;
+            window.parent.postMessage({
+                frameHeight: height
+            }, '*');
+        });
+        
+        // Ajusta quando a janela é redimensionada
+        window.addEventListener('resize', function() {
+            const height = document.documentElement.scrollHeight;
+            window.parent.postMessage({
+                frameHeight: height
+            }, '*');
+        });
+    </script>
+</body>
+</html>

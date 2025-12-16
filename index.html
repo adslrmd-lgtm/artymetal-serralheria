@@ -39,9 +39,22 @@
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
 
+        .logo-container {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
         @media (max-width: 768px) {
             .logo {
                 max-width: 280px;
+            }
+            
+            .logo-container {
+                padding: 15px 20px;
             }
         }
 
@@ -334,7 +347,9 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <img src="Captura de tela 2025-12-15 132954.png" alt="Arty Metal Logo" class="logo" style="max-width: 400px; height: auto; margin-bottom: 20px;">
+        <div class="logo-container">
+            <img src="Captura de tela 2025-12-15 132954.png" alt="Arty Metal Logo" class="logo">
+        </div>
         <h1>Arty Metal - Serralheria e Caldeiraria</h1>
         <p>Mais de 10 anos transformando metal em soluções duráveis para Salto e região</p>
         <div class="guarantee-badge">⭐ Até 10 Anos de Garantia na Pintura</div>
@@ -464,7 +479,7 @@
             <div class="footer-info">
                 <div class="footer-info-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Salto - SP e Região</span>
+                    <span>Estrada Salto Capivari, nº 1120 - Bairro Chapada, Salto/SP</span>
                 </div>
                 <div class="footer-info-item">
                     <i class="fas fa-phone"></i>

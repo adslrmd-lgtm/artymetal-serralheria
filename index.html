@@ -32,6 +32,19 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
+        .logo {
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 280px;
+            }
+        }
+
         .header p {
             font-size: 1.2em;
             margin-bottom: 30px;
@@ -321,7 +334,8 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <h1>🔧 Arty Metal - Serralheria e Caldeiraria</h1>
+        <img src="images/logo.png" alt="Arty Metal Logo" class="logo" style="max-width: 400px; height: auto; margin-bottom: 20px;">
+        <h1>Arty Metal - Serralheria e Caldeiraria</h1>
         <p>Mais de 15 anos transformando metal em soluções duráveis para Salto e região</p>
         <div class="guarantee-badge">⭐ Até 10 Anos de Garantia na Pintura</div>
         <br><br>
